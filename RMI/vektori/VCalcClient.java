@@ -8,11 +8,8 @@ import java.util.Vector;
 
 public class VCalcClient {
   VCalcManager manager;
-  VCalcCallback callback;
 
   public VCalcClient(String host, String port, String server) {
-    this.callback = new VCalcCallbackImpl();
-
     try {
       this.manager = (VCalcManager) Naming.lookup("rmi://" + host + ":" + port + "/" + server);
     } catch (RemoteException re) {

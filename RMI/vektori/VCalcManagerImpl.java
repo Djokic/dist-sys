@@ -21,7 +21,7 @@ public class VCalcManagerImpl extends UnicastRemoteObject implements VCalcManage
       this.currentReqest++;
       
       int result = 0;
-      for (int i = 0; i < req.a.size(); i++) {
+      for (int i = 0; i < req.getVectorA().size(); i++) {
         result += req.getVectorA().get(i) * req.getVectorB().get(i);
       }
 
